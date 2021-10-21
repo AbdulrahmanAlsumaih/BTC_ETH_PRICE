@@ -3,6 +3,7 @@ import bitcoin from './bitcoin.svg'
 import './btc.css';
 import useFetch from '../../Api/useFetch'
 import exchangeRecommended from '../../Api/exchangeRecommended'
+import Paper from '@mui/material/Paper';
 
 
 
@@ -15,6 +16,17 @@ function BTCTracker () {
   const { data: buyCoinbase, buyCoinbaseLoading, buyCoinbaseError} = useFetch(buyCoinbaseBTC);
   const { data: sellCoinbase, sellCoinbaseLoading, sellCoinbaseError} = useFetch(sellCoinbaseBTC);
   const { data: blockchainBuyandSell, blockchainLoading, blockchainError} = useFetch(blockchain);
+
+  const timeArea = {
+    height: 450,
+    width: 450,
+    textAlign: 'center',
+    rounded: true,
+    paddingTop: 15,
+    backgroundColor: '#FF7F50',
+    opacity: 0.9,
+   
+  };
   
     if (buyCoinbaseLoading || sellCoinbaseLoading || blockchainLoading) 
     {
@@ -29,22 +41,19 @@ function BTCTracker () {
     else
     {
       return (
-        <div>
+        <Paper style={timeArea}elevation={24}>
           <div className = "App-btc">
             <img src={bitcoin} className="App-logo-btc" alt="logo" />
-            <div>
-              <h1>{buyCoinbase?.data.base} Coinbase Buy Price</h1>
-              <h1>{buyCoinbase?.data.amount}</h1>
-              <h1>{sellCoinbase?.data.base} Coinbase Sell Price</h1>
-              <h1>{sellCoinbase?.data.amount}</h1>
-              
-              <h1>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price</h1>
-              <h1>{blockchainBuyandSell?.data.buy}</h1>
-              <h1>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price</h1>
-              <h1>{blockchainBuyandSell?.data.sell}</h1>
-            </div>
           </div>
-      </div>
+          <small>{buyCoinbase?.data.base} Coinbase Buy Price <br></br></small>
+          <b>{buyCoinbase?.data.amount}<br></br></b>
+          <small>{sellCoinbase?.data.base} Coinbase Sell Price<br></br></small>
+          <b>{sellCoinbase?.data.amount}<br></br></b>   
+          <small>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price<br></br></small>
+          <b>{blockchainBuyandSell?.data.buy}<br></br></b>
+          <small>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price<br></br></small>
+          <b>{blockchainBuyandSell?.data.sell}<br></br></b>
+      </Paper>
       );
     }
 }
