@@ -1,11 +1,15 @@
 import React from "react";
-import Home from "./Components/Home/home"
+import Body from "./Components/Body/body"
+import Header from "./Components/Header/header"
 
 
 
 function App() {
   return (
-    <Home/>
+    <div>
+        <Header/>
+        <Body/>
+    </div>
   );
 }
 
