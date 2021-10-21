@@ -13,7 +13,7 @@ export const Body = () => {
           <ETH/>
       </div>
       <div style={{
-          position: 'absolute', right: '55%', top: '50%',
+          position: 'absolute', right: '50%', top: '50%',
           transform: 'translate(-50%, -50%)'}}>
             <BTC/>
         </div>
