@@ -2,7 +2,8 @@ import React from 'react';
 import bitcoin from './bitcoin.svg' 
 import './btc.css';
 import useFetch from '../../Api/useFetch'
-import exchangeRecommended from '../../Api/exchangeRecommended'
+import exchangeRecommendedBuy from '../../Api/exchangeRecommendedBuy'
+import exchangeRecommendedSell from '../../Api/exchangeRecommendedSell'
 import Paper from '@mui/material/Paper';
 
 
@@ -16,10 +17,12 @@ function BTCTracker () {
   const { data: buyCoinbase, buyCoinbaseLoading, buyCoinbaseError} = useFetch(buyCoinbaseBTC);
   const { data: sellCoinbase, sellCoinbaseLoading, sellCoinbaseError} = useFetch(sellCoinbaseBTC);
   const { data: blockchainBuyandSell, blockchainLoading, blockchainError} = useFetch(blockchain);
+  const recommended_Buy = exchangeRecommendedBuy(buyCoinbase?.data.amount, blockchainBuyandSell?.data.buy)
+  const recommended_Sell = exchangeRecommendedSell(sellCoinbase?.data.amount, blockchainBuyandSell?.data.sell)
 
   const timeArea = {
-    height: 450,
-    width: 450,
+    height: 500,
+    width: 500,
     textAlign: 'center',
     rounded: true,
     paddingTop: 15,
@@ -49,10 +52,12 @@ function BTCTracker () {
           <b>{buyCoinbase?.data.amount}<br></br></b>
           <small>{sellCoinbase?.data.base} Coinbase Sell Price<br></br></small>
           <b>{sellCoinbase?.data.amount}<br></br></b>   
-          <small>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price<br></br></small>
+          <small>{blockchainBuyandSell?.data.symbol} Blockchain Buy Price<br></br></small>
           <b>{blockchainBuyandSell?.data.buy}<br></br></b>
           <small>{blockchainBuyandSell?.data.symbol} Blockchain Sell Price<br></br></small>
           <b>{blockchainBuyandSell?.data.sell}<br></br></b>
+          <small>Recommend Buy Echange <b>{recommended_Buy}</b><br></br></small>
+          <small>Recommend Sell Echange <b>{recommended_Sell}</b><br></br></small>
       </Paper>
       );
     }
