@@ -10,7 +10,7 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ background: '#2E3B55' }}>
         <Toolbar>
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 } }>
+          <Typography align="center" variant="h4" component="div" sx={{ flexGrow: 1 } }>
             Bitcoin and Ethereum Dashboard Price
           </Typography>
         </Toolbar>
