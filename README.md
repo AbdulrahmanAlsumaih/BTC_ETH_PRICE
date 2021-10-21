@@ -7,7 +7,7 @@ BTC ETH PRICE is dashboard to show the buy and sell price of bitcoin and ethereu
 Install docker in your machine [docker](https://docs.docker.com/get-docker/). Please
 visit the website for more information.
 
-Install Docker Compose in your machine [Docker_Compose](https://docs.docker.com/compose/
+Install Docker Compose in your machine [DockerCompose](https://docs.docker.com/compose/
 install/). Please visit the website for more information.
 
 - clone the project and cd to server directory and run this command where Docker-Compose.yml file is
