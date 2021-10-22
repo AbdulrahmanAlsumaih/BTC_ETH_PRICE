@@ -29,19 +29,19 @@ In the project directory, you can run:
 
 - Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
 
-  # There is no any short cuts taken due to limited time but I use FastAPI framework to config the backend on optimal time
+  There is no any short cuts taken due to limited time but I use FastAPI framework to config the backend on optimal time
 
   - Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
 
-  # The Btc and Eth component is over-designed and using Material UI library.
+  The Btc and Eth component is over-designed and using Material UI library.
 
 - If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
 
-  # I would improve the backend API
+  I would improve the backend API
 
 - What are some other enhancements you would have made, if you had more time to do this implementation
 
-  # I would on enhanc the design on each component with material ui and make them look better
+  I would on enhanc the design on each component with material ui and make them look better
 
 ## Contributing
 
