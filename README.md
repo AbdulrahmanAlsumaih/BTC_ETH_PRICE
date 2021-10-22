@@ -37,7 +37,7 @@ In the project directory, you can run:
 
 - If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
 
-  I would improve the backend API
+  I would improve the backend http pipeline to be more scalable.
 
 - What are some other enhancements you would have made, if you had more time to do this implementation
 
