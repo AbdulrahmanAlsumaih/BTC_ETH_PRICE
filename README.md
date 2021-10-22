@@ -1,6 +1,6 @@
 # BTC ETH PRICE
 
-BTC ETH PRICE is dashboard to show the buy and sell price of bitcoin and ethereum from two different exchanges
+BTC ETH PRICE is dashboard to show the Buy and Sell price of bitcoin and ethereum from two different exchanges and recommend what exchanges is the best for Buy and for Sell
 
 ## Installation
 
@@ -15,18 +15,33 @@ Install Docker Compose in your machine [Docker_Compose](https://docs.docker.com/
 docker compose up
 ```
 
+# Run the Backend first
+
 - For client, install `npm`
 
 In the project directory, you can run:
 
-### `npm start`
+```bash
+  npm start
+```
 
 ## Questionnaire
 
 - Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
-- Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+
+  # There is no any short cuts taken due to limited time but I use FastAPI framework to config the backend on optimal time
+
+  - Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+
+  # The Btc and Eth component is over-designed and using Material UI library.
+
 - If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
+
+  # I would improve the backend API
+
 - What are some other enhancements you would have made, if you had more time to do this implementation
+
+  # I would on enhanc the design on each component with material ui and make them look better
 
 ## Contributing
 
