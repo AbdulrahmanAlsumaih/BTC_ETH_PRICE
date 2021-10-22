@@ -17,7 +17,7 @@ docker compose up
 
 # Run the Backend first
 
-- For client, install `npm`
+- For client, cd to client and install `npm`
 
 In the project directory, you can run:
 
