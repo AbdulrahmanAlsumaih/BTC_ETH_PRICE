@@ -31,7 +31,7 @@ In the project directory, you can run:
 
   There is no any short cuts taken due to limited time but I use FastAPI framework to config the backend on optimal time
 
-  - Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+- Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
 
   The Btc and Eth component is over-designed and using Material UI library.
 
